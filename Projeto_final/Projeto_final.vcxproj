@@ -107,6 +107,11 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)pista1.txt" "$(OutDir)" /Y /I /D
+xcopy "$(ProjectDir)car_red.png" "$(OutDir)" /Y /I /D
+xcopy "$(ProjectDir)car_blue.png" "$(OutDir)" /Y /I /D</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -127,7 +132,16 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include=".gitignore" />
-    <Text Include="testepista.txt" />
+    <Text Include="pista1.txt">
+      <DeploymentContent>true</DeploymentContent>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="carro.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="car_blue.png" />
+    <Image Include="car_red.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

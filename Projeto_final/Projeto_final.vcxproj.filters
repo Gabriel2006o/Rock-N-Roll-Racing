@@ -20,7 +20,20 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="testepista.txt" />
+    <Text Include="pista1.txt" />
     <Text Include=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="carro.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="car_blue.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="car_red.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
   </ItemGroup>
 </Project>
